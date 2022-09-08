@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@font-face {
+    font-family: "Anonymous-Pro-Regular";
+    src: url("./fonts/Anonymous_Pro.ttf");
+  }
+
+  @font-face {
+    font-family: "Anonymous-Pro-Bold";
+    src: url("./fonts/Anonymous_Pro_B.ttf");
+  }
+  @font-face {
+    font-family: "Code-Bold";
+    src: url("./fonts/CODE_Bold.woff");
+  }
+  @font-face {
+    font-family: "Code-Light";
+    src: url("./fonts/CODE_Light.woff");
+  }
+
+  @layer base {
+    h1 {
+      @apply text-3xl my-4 font-codeBold text-textPink;
+    }
+
+    h2 {
+      @apply text-2xl my-2 mt-6 text-textPink;
+    }
+
+    h3 {
+      @apply text-xl my-2 mt-6 text-textPink;
+    }
+
+    p {
+      @apply my-4;
+    }
+
+    pre {
+      @apply my-10;
+    }
+
+    strong {
+      @apply font-codeBold text-textPink;
+    }
+
+    li:before {
+      content: "- ";
+    }
+
+    p > code {
+      @apply p-2 rounded-md text-yellow-100/80;
+    }
+
+    li > code {
+      @apply p-2 rounded-md text-yellow-100/80;
+    }
+
+    a {
+      @apply underline;
+    }
+
+    code {
+      @apply bg-[#1E1E1E] text-[13px];
+    }
+  }
+
+  @layer components {
+    .blinking-cursor:after {
+      content: '|';
+      @apply text-textPink;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+    }
+  }
+
+  .animate__animated {
+    --animate-duration: 0.2s;
+  }
