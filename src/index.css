@@ -80,6 +80,31 @@
     }
   }
 
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 0px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #8eff1e;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0883;
+  }
+  
+  html {
+    overflow-y: overlay;
+    overflow-x: hidden;
+    background: black;
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
   .animate__animated {
     --animate-duration: 0.2s;
   }

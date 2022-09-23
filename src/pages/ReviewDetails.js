@@ -66,7 +66,7 @@ const ReviewDetails = () => {
 				<ReactMarkdown
 					rehypePlugins={[rehypeRaw]}
 					components={CodeBlock}
-					className='text-white/70 mt-10 markdown'>
+					className='text-white/70 mt-10 markdown w-full'>
 					{normData.review.body}
 				</ReactMarkdown>
 			</div>
