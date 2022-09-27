@@ -20,7 +20,7 @@ const Homepage = () => {
 		<div className='flex flex-col bg-base'>
 			<Filter />
 			<div className='flex flex-col mx-auto w-full 550:w-11/12 lg:w-9/12 min-h-screen h-fit'>
-				{normData.reviews?.reverse().map((review) => (
+				{normData.reviews?.map((review) => (
 					<TerminalPost
 						key={review.id}
 						title={review.title}
