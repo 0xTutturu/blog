@@ -20,16 +20,18 @@ const Homepage = () => {
 		<div className='flex flex-col bg-base'>
 			<Filter />
 			<div className='flex flex-col mx-auto w-full 550:w-11/12 lg:w-9/12 min-h-screen h-fit'>
-				{normData.reviews?.map((review) => (
-					<TerminalPost
-						key={review.id}
-						title={review.title}
-						description={review.body}
-						date={review.publishedAt.split("T")[0]}
-						page={`/blog-posts/${review.id}`}
-						categories={review.categories}
-					/>
-				))}
+				{normData.reviews
+					?.sort((a, b) => (a.id < b.id ? 1 : -1))
+					.map((review) => (
+						<TerminalPost
+							key={review.id}
+							title={review.title}
+							description={review.body}
+							date={review.publishedAt.split("T")[0]}
+							page={`/blog-posts/${review.id}`}
+							categories={review.categories}
+						/>
+					))}
 			</div>
 		</div>
 	);
