@@ -27,16 +27,18 @@ const Category = () => {
 			<Header topic={`>> category/`} content={normData.category.name} />
 
 			<div className='flex flex-col mx-auto w-8/12 min-h-screen h-fit'>
-				{normData.category.reviews.map((review) => (
-					<TerminalPost
-						key={review.id}
-						title={review.title}
-						description={review.body}
-						date={review.publishedAt.split("T")[0]}
-						page={`/blog-posts/${review.id}`}
-						categories={review.categories}
-					/>
-				))}
+				{normData.category.reviews
+					?.sort((a, b) => (a.id < b.id ? 1 : -1))
+					.map((review) => (
+						<TerminalPost
+							key={review.id}
+							title={review.title}
+							description={review.body}
+							date={review.publishedAt.split("T")[0]}
+							page={`/blog-posts/${review.id}`}
+							categories={review.categories}
+						/>
+					))}
 			</div>
 		</div>
 	);
