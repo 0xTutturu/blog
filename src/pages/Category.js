@@ -33,7 +33,7 @@ const Category = () => {
 						title={review.title}
 						description={review.body}
 						date={review.publishedAt.split("T")[0]}
-						page={`/details/${review.id}`}
+						page={`/blog-posts/${review.id}`}
 						categories={review.categories}
 					/>
 				))}
