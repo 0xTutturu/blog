@@ -7,6 +7,7 @@ import TerminalPost from "../components/TerminalPost";
 import Filter from "../components/Filter";
 import Loading from "../components/Loading";
 import { Alert } from "../lib/Primitives";
+import { Helmet } from "react-helmet-async";
 
 const Homepage = () => {
 	const { loading, error, data } = useQuery(REVIEWS);
@@ -18,6 +19,23 @@ const Homepage = () => {
 
 	return (
 		<div className='flex flex-col bg-base'>
+			<Helmet>
+				<title>Tutturu - smart contract dev and auditing</title>
+				<link rel='canonical' href='https://www.tacobell.com/' />
+				{/* Google search engine */}
+				<meta itemProp='name' content='Tutturu Blog' />
+				<meta
+					itemProp='description'
+					content='Damn Vulnerable Defi solutions, Ethernaut solutions, Paradigm CTF solutions '
+				/>
+				{/* Twitter meta tags */}
+				<meta name='twitter:card' content='summary' />
+				<meta name='twitter:title' content='Tutturu Blog' />
+				<meta
+					name='twitter:description'
+					content='CTFs, security, and smart contract development.'
+				/>
+			</Helmet>
 			<Filter />
 			<div className='flex flex-col mx-auto w-full 550:w-11/12 lg:w-9/12 min-h-screen h-fit'>
 				{normData.reviews

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { HelmetProvider } from "react-helmet-async";
 import "animate.css";
 
 import { ReviewDetails, Homepage, Category, About } from "./pages";
@@ -16,18 +17,20 @@ const client = new ApolloClient({
 function App() {
 	return (
 		<ApolloProvider client={client}>
-			<div className='font-anonymousPro min-h-screen'>
-				<Navigation />
-				<Routes>
-					<Route path='/' element={<Homepage />} />
-					<Route path='/blog-posts/:id' element={<ReviewDetails />} />
-					<Route path='/category/:id' element={<Category />} />
-					<Route path='/about' element={<About />} />
-					{/* <Route path='/code-fighters' element={<CodeFighters />} /> */}
+			<HelmetProvider>
+				<div className='font-anonymousPro min-h-screen'>
+					<Navigation />
+					<Routes>
+						<Route path='/' element={<Homepage />} />
+						<Route path='/blog-posts/:id' element={<ReviewDetails />} />
+						<Route path='/category/:id' element={<Category />} />
+						<Route path='/about' element={<About />} />
+						{/* <Route path='/code-fighters' element={<CodeFighters />} /> */}
 
-					<Route path='*' element={<div>404</div>} />
-				</Routes>
-			</div>
+						<Route path='*' element={<div>404</div>} />
+					</Routes>
+				</div>
+			</HelmetProvider>
 		</ApolloProvider>
 	);
 }
