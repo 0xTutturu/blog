@@ -60,6 +60,10 @@
     a {
       @apply underline;
     }
+    
+    a:hover {
+      @apply text-textGreen;
+    }
 
     code {
       @apply bg-[#1E1E1E] text-[13px];

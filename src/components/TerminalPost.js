@@ -14,7 +14,7 @@ const TerminalPost = ({
 		<div className='w-full m-2'>
 			<Link
 				to={page}
-				className='flex flex-col w-full p-5 ease-in-out duration-100 group'>
+				className='flex flex-col w-full p-5 ease-in-out duration-100 group no-underline'>
 				<div className='flex flex-row text-textGreen'>
 					<h4 className='text-textPink mr-2 hidden md:block'>
 						{`0xTutturu/blog-posts/`}{" "}
