@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { HelmetProvider } from "react-helmet-async";
 import "animate.css";
 
-import { ReviewDetails, Homepage, Category, About } from "./pages";
+import { ReviewDetails, Homepage, Category, About, Projects } from "./pages";
 import Navigation from "./components/Navigation";
 import Filter from "./components/Filter";
 import CodeFighters from "./components/CodeFighters";
@@ -25,6 +25,7 @@ function App() {
 						<Route path='/blog-posts/:id' element={<ReviewDetails />} />
 						<Route path='/category/:id' element={<Category />} />
 						<Route path='/about' element={<About />} />
+						{/* <Route path='/projects' element={<Projects />} /> */}
 						{/* <Route path='/code-fighters' element={<CodeFighters />} /> */}
 
 						<Route path='*' element={<div>404</div>} />

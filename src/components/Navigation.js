@@ -36,12 +36,19 @@ const Navigation = () => {
 						<span className='group-hover:block group-hover:animate-float-y hidden mr-1 text-textGreen'>{`>>`}</span>
 						Code Fighters
 					</Link> */}
+
 					<Link
 						to='/about'
 						className='flex flex-row hover:text-textGreen no-underline group'>
 						<span className='group-hover:block group-hover:animate-float-y hidden mr-1 text-textGreen'>{`>>`}</span>
 						About Me
 					</Link>
+					{/* <Link
+						to='/projects'
+						className='flex flex-row hover:text-textGreen no-underline group'>
+						<span className='group-hover:block group-hover:animate-float-y hidden mr-1 text-textGreen'>{`>>`}</span>
+						Projects
+					</Link> */}
 					<Link
 						to='/'
 						className='flex flex-row hover:text-textGreen  no-underline group'>
