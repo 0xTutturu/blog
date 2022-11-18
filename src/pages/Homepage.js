@@ -20,7 +20,7 @@ const Homepage = () => {
 	return (
 		<div className='flex flex-col bg-base'>
 			<Helmet>
-				<title>Tutturu - smart contract dev and auditing</title>
+				<title>Tutturu! - Web3 Blog</title>
 				<link rel='canonical' href='https://www.tacobell.com/' />
 				{/* Google search engine */}
 				<meta itemProp='name' content='Tutturu Blog' />
